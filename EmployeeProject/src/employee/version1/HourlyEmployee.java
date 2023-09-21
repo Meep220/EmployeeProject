@@ -119,14 +119,17 @@ public class HourlyEmployee {
     
     public void displayInfo(){
         System.out.println(String.format("%d - %s",this.empID,this.empName));
-        System.out.println(String.format("Date Hired : %td,%tm,%ty\nDate of Birth: %td,%tm,%ty ",this.empDateHired,this.empDateHired,this.empDateHired,this.empBirthDate,this.empBirthDate,this.empBirthDate));
+        System.out.println(String.format("Date Hired : %td,%tm,%ty\nDate of Birth: %td,%tm,%ty "
+                ,this.empDateHired,this.empDateHired,this.empDateHired,this.empBirthDate,this.empBirthDate,this.empBirthDate));
         System.out.println(String.format("Total Hours: %.0f\nPayRate: %.2f",this.totalHoursWorked,this.ratePerHour));
         System.out.println(String.format("Salary : %2f",this.computeSalary()));
     }
 
     @Override
     public String toString() {
-        return String.format("%d - %s\nDate Hired : %td,%tm,%ty\nDate of Birth: %td,%tm,%ty\nTotal Hours: %.0f\nPayRate: %.2f",this.empID,this.empName,this.empDateHired,this.empDateHired,this.empDateHired,this.empBirthDate,this.empBirthDate,this.empBirthDate,this.totalHoursWorked,this.ratePerHour);
+        return String.format("%d - %s\nDate Hired : %td,%tm,%ty\nDate of Birth: %td,%tm,%ty\nTotal Hours: %.0f\nPayRate: %.2f",
+                this.empID,this.empName,this.empDateHired,this.empDateHired,this.empDateHired,
+                this.empBirthDate,this.empBirthDate,this.empBirthDate,this.totalHoursWorked,this.ratePerHour);
     }
     
     
