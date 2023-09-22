@@ -117,9 +117,10 @@ public class BasePlusCommissionEmployee {
         
     }
     public void displayInfo(){
-        System.out.println(String.format("%d - %s",this.empID,this.empName));
-        System.out.println(String.format("Date Hired : %td,%tm,%ty\nDate of Birth: %td,%tm,%ty ",this.empDateHired,this.empDateHired,this.empDateHired,this.empBirthDate,this.empBirthDate,this.empBirthDate));
-        System.out.println(String.format("Total Sales: %.2f\nBase Salary: %.2f",this.totalSales,this.baseSalary));
+//        System.out.println(String.format("%d - %s",this.empID,this.empName));
+//        System.out.println(String.format("Date Hired : %td,%tm,%ty\nDate of Birth: %td,%tm,%ty ",this.empDateHired,this.empDateHired,this.empDateHired,this.empBirthDate,this.empBirthDate,this.empBirthDate));
+//        System.out.println(String.format("Total Sales: %.2f\nBase Salary: %.2f",this.totalSales,this.baseSalary));
+        System.out.println(this);
         System.out.println(String.format("Salary : %.2f",this.computeSalary()));
     }
     

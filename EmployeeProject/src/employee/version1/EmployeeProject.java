@@ -32,6 +32,9 @@ public class EmployeeProject {
         CommissionEmployee Cemp = new CommissionEmployee(1,"Rey",hired,Birth,1);
         Cemp.displayInfo();
         
+        BasePlusCommissionEmployee BPCemp = new BasePlusCommissionEmployee(1,"Rey",hired,Birth,100000,1);
+        BPCemp.displayInfo();
+        
     }
     
 }

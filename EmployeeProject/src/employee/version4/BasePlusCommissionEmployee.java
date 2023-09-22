@@ -3,8 +3,10 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package employee.version2;
+package employee.version4;
 
+
+import employee.version3.*;
 import java.util.Date;
 
 /**
@@ -19,8 +21,12 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
         this.baseSalary = 0;
     }
     
-    public BasePlusCommissionEmployee(int empID,String name,Date hired,Date birth,double totalSales,double base){
+    public BasePlusCommissionEmployee(int empID,Name name,Date hired,Date birth,double totalSales,double base){
         super(empID,name,hired,birth,totalSales);
+        this.baseSalary = base;
+    }
+    public BasePlusCommissionEmployee(int empID,String first,String middle,String last,Date hired,Date birth,double totalSales,double base){
+        super(empID,first,middle,last,hired,birth,totalSales);
         this.baseSalary = base;
     }
     public BasePlusCommissionEmployee(BasePlusCommissionEmployee emp){
@@ -29,22 +35,22 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
     }
     
     public double computeSalary(){
-//        double totalSales = super.getTotalSales();
-          double Salary =super.computeSalary();
-//        if( totalSales >=500000){
-//            Salary += totalSales *0.5;
-//            Salary += this.baseSalary;
-//        }else if(totalSales >= 100000 && totalSales < 500000){
-//            Salary += totalSales *0.3;
-//            Salary += this.baseSalary;
-//        }else if(totalSales >= 50000 && totalSales < 100000){
-//            Salary += totalSales *0.2;
-//            Salary += this.baseSalary;
-//        }else{
-//            Salary += totalSales *0.05;
-//            Salary += this.baseSalary;
-//        }
-        return Salary + baseSalary;
+        double totalSales = super.getTotalSales();
+        double Salary = 0;
+        if( totalSales >=500000){
+            Salary += totalSales *0.5;
+            Salary += this.baseSalary;
+        }else if(totalSales >= 100000 && totalSales < 500000){
+            Salary += totalSales *0.3;
+            Salary += this.baseSalary;
+        }else if(totalSales >= 50000 && totalSales < 100000){
+            Salary += totalSales *0.2;
+            Salary += this.baseSalary;
+        }else{
+            Salary += totalSales *0.05;
+            Salary += this.baseSalary;
+        }
+        return Salary;
         
     }
     

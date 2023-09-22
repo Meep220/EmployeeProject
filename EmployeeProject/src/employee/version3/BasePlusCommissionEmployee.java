@@ -34,22 +34,22 @@ public class BasePlusCommissionEmployee extends CommissionEmployee{
     }
     
     public double computeSalary(){
-        double totalSales = super.getTotalSales();
-        double Salary = 0;
-        if( totalSales >=500000){
-            Salary += totalSales *0.5;
-            Salary += this.baseSalary;
-        }else if(totalSales >= 100000 && totalSales < 500000){
-            Salary += totalSales *0.3;
-            Salary += this.baseSalary;
-        }else if(totalSales >= 50000 && totalSales < 100000){
-            Salary += totalSales *0.2;
-            Salary += this.baseSalary;
-        }else{
-            Salary += totalSales *0.05;
-            Salary += this.baseSalary;
-        }
-        return Salary;
+//        double totalSales = super.getTotalSales();
+        double Salary = super.computeSalary();
+//        if( totalSales >=500000){
+//            Salary += totalSales *0.5;
+//            Salary += this.baseSalary;
+//        }else if(totalSales >= 100000 && totalSales < 500000){
+//            Salary += totalSales *0.3;
+//            Salary += this.baseSalary;
+//        }else if(totalSales >= 50000 && totalSales < 100000){
+//            Salary += totalSales *0.2;
+//            Salary += this.baseSalary;
+//        }else{
+//            Salary += totalSales *0.05;
+//            Salary += this.baseSalary;
+//        }
+        return Salary + baseSalary;
         
     }
     

@@ -30,7 +30,7 @@ public class EmployeeProject {
         emp3.displayInfo();
         System.out.println(emp3.toString());
         
-        BasePlusCommissionEmployee emp4 = new BasePlusCommissionEmployee(4,"Oso",hired,birth,100000,1);
+        BasePlusCommissionEmployee emp4 = new BasePlusCommissionEmployee(4,"Oso",hired,birth,50000,1);
         emp4.displayInfo();
         System.out.println(emp4.toString());
         
